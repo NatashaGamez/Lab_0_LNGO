@@ -1,4 +1,3 @@
-
 # -- ------------------------------------------------------------------------------------ -- #
 # -- Proyecto: Describir brevemente el proyecto en general                                -- #
 # -- Codigo: RepasoPython.py - describir brevemente el codigo                             -- #
@@ -7,10 +6,10 @@
 # -- ------------------------------------------------------------------------------------ -- #
 
 # import numpy as np                                      # funciones numericas
-import pandas as pd                                       # dataframes y utilidades
-from datetime import timedelta                            # diferencia entre datos tipo tiempo
-from oandapyV20 import API                                # conexion con broker OANDA
-import oandapyV20.endpoints.instruments as instruments    # informacion de precios historicos
+import pandas as pd  # dataframes y utilidades
+from datetime import timedelta  # diferencia entre datos tipo tiempo
+from oandapyV20 import API  # conexion con broker OANDA
+import oandapyV20.endpoints.instruments as instruments  # informacion de precios historicos
 
 
 # -- --------------------------------------------------------- FUNCION: Descargar precios -- #
@@ -169,3 +168,13 @@ def f_precios_masivos(p0_fini, p1_ffin, p2_gran, p3_inst, p4_oatk, p5_ginc):
         r_df_final['Close'] = pd.to_numeric(r_df_final['Close'], errors='coerce')
 
         return r_df_final
+
+
+def f_sesion(hora):
+    asia = [22, 23, 0, 1, 2, 3, 4, 5, 6, 7]
+    asia_europa = 8
+    europa = [9, 10, 11, 12]
+    europa_america = [13, 14, 15, 16]
+    america= [17, 18, 19, 20]
+
+    return

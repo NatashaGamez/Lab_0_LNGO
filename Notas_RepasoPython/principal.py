@@ -49,9 +49,10 @@ vs_grafica2 = vs.g_boxplot_varios(p0_data=df_pe[['co']], p1_norm=False)
 vs_grafica2.show()
 
 # -- 01: Mes de la vela.
-
+df_pe['mes'] = [df_pe['TimeStamp'][i].month for i in range(0, len(df_pe['TimeStamp']))]
 
 # -- 02: Sesion de la vela.
+    #Funcion f_sesion
 # -- 03: Amplitud OC esperada de vela para cualquier dia de la semana (Dist de Freq).
 # -- 04: Amplitud HL esperada de vela para cualquier dia de la semana (Dist de Freq).
 # -- 05: Evolucion de velas consecutivas (1: Alcistas, 0: Bajistas).
