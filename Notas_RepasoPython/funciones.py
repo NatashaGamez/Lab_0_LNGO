@@ -169,7 +169,7 @@ def f_precios_masivos(p0_fini, p1_ffin, p2_gran, p3_inst, p4_oatk, p5_ginc):
 
         return r_df_final
 
-
+#Funcion para sacar sesion
 def f_sesion(hora):
     if 0 & hora <= hora <= 7:
         df = 'Asia'

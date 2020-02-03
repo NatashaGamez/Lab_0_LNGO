@@ -121,6 +121,6 @@
     <state x="651" y="263" width="672" height="678" key="search.everywhere.popup/57.34.1863.1046@57.34.1863.1046" timestamp="1579819366125" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Notas_RepasoPython$principal.coverage" NAME="principal Coverage Results" MODIFIED="1580702110641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Notas_RepasoPython$principal.coverage" NAME="principal Coverage Results" MODIFIED="1580702320081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
