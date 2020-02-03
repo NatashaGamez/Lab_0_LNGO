@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5acab909-aabc-4061-8202-f6a309e43605" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/funciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/funciones.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/principal.py" beforeDir="false" afterPath="$PROJECT_DIR$/principal.py" afterDir="false" />
@@ -90,7 +89,8 @@
       <updated>1579745865124</updated>
       <workItem from="1580390136892" duration="354000" />
       <workItem from="1580390522905" duration="781000" />
-      <workItem from="1580393856767" duration="1711000" />
+      <workItem from="1580393856767" duration="1807000" />
+      <workItem from="1580680659218" duration="8177000" />
     </task>
     <servers />
   </component>
@@ -121,6 +121,6 @@
     <state x="651" y="263" width="672" height="678" key="search.everywhere.popup/57.34.1863.1046@57.34.1863.1046" timestamp="1579819366125" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Notas_RepasoPython$principal.coverage" NAME="principal Coverage Results" MODIFIED="1580395194577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Notas_RepasoPython$principal.coverage" NAME="principal Coverage Results" MODIFIED="1580702110641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -1,4 +1,3 @@
-
 # -- ------------------------------------------------------------------------------------ -- #
 # -- Proyecto: Repaso de python 3 y analisis de precios OHLC                              -- #
 # -- Codigo: principal.py - script principal de proyecto                                  -- #
@@ -8,16 +7,16 @@
 
 # -- ------------------------------------------------------------- Importar con funciones -- #
 
-import funciones as fn                              # Para procesamiento de datos
-import visualizaciones as vs                        # Para visualizacion de datos
-import pandas as pd                                 # Procesamiento de datos
-from datos import OA_Ak                             # Importar token para API de OANDA
+import funciones as fn  # Para procesamiento de datos
+import visualizaciones as vs  # Para visualizacion de datos
+import pandas as pd  # Procesamiento de datos
+from datos import OA_Ak  # Importar token para API de OANDA
 
 # -- --------------------------------------------------------- Descargar precios de OANDA -- #
 
 # token de OANDA
-OA_In = "EUR_USD"                  # Instrumento
-OA_Gn = "D"                        # Granularidad de velas
+OA_In = "EUR_USD"  # Instrumento
+OA_Gn = "D"  # Granularidad de velas
 fini = pd.to_datetime("2019-07-06 00:00:00").tz_localize('GMT')  # Fecha inicial
 ffin = pd.to_datetime("2019-12-06 00:00:00").tz_localize('GMT')  # Fecha final
 
@@ -42,7 +41,7 @@ df_pe['hora'] = [df_pe['TimeStamp'][i].hour for i in range(0, len(df_pe['TimeSta
 df_pe['dia'] = [df_pe['TimeStamp'][i].weekday() for i in range(0, len(df_pe['TimeStamp']))]
 
 # -- 0B: Boxplot de amplitud de velas (close - open).
-df_pe['co'] = (df_pe['Close'] - df_pe['Open'])*pip_mult
+df_pe['co'] = (df_pe['Close'] - df_pe['Open']) * pip_mult
 
 # -- ------------------------------------------------------------ Graficar Boxplot plotly -- #
 vs_grafica2 = vs.g_boxplot_varios(p0_data=df_pe[['co']], p1_norm=False)
@@ -50,11 +49,14 @@ vs_grafica2.show()
 
 # -- 01: Mes de la vela.
 df_pe['mes'] = [df_pe['TimeStamp'][i].month for i in range(0, len(df_pe['TimeStamp']))]
-
-# -- 02: Sesion de la vela.
-    #Funcion f_sesion
+# -- 02: Session de la vela.
+for i in range(0, len(df_pe['hora'])):
+    df_pe['sesion'] = fn.f_sesion(df_pe['hora'][i])
 # -- 03: Amplitud OC esperada de vela para cualquier dia de la semana (Dist de Freq).
+df_pe['oc'] = (df_pe['Close'] - df_pe['Open']) * pip_mult
 # -- 04: Amplitud HL esperada de vela para cualquier dia de la semana (Dist de Freq).
+df_pe['hl'] = (df_pe['High'] - df_pe['Low']) * pip_mult
 # -- 05: Evolucion de velas consecutivas (1: Alcistas, 0: Bajistas).
 # -- 06: Maxima evolucion esperada de velas consecutivas (Dist Acum de Freq).
 # -- 07: Calculo + Grafica autopropuesta.
+

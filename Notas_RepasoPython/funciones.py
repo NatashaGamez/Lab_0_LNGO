@@ -171,10 +171,17 @@ def f_precios_masivos(p0_fini, p1_ffin, p2_gran, p3_inst, p4_oatk, p5_ginc):
 
 
 def f_sesion(hora):
-    asia = [22, 23, 0, 1, 2, 3, 4, 5, 6, 7]
-    asia_europa = 8
-    europa = [9, 10, 11, 12]
-    europa_america = [13, 14, 15, 16]
-    america= [17, 18, 19, 20]
+    if 0 & hora <= hora <= 7:
+        df = 'Asia'
+    elif hora == 8:
+        df = 'Asia Europa'
+    elif 9 & hora <= hora <= 12:
+        df = 'Europa'
+    elif 13 & hora <= hora <= 16:
+        df = 'Europa America'
+    elif 17 & hora <= hora <= 21:
+        df = 'America'
+    elif 22 & hora <= hora <= 23:
+        df = 'Asia'
 
-    return
+    return df
